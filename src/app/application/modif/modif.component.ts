@@ -18,7 +18,7 @@ export class ModifComponent implements OnInit {
   ep:boolean;
   date:Date;
   message:string;
-  sub:boolean=false;
+  prod:boolean=false;
 
 
   lesProduits :Produit[];
@@ -40,7 +40,7 @@ editerProduit()
   else
     {
     this.message="ID don't exist";
-    this.sub=true;
+    this.prod=true;
     }
   }
 

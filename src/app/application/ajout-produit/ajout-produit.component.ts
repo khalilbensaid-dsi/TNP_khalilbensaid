@@ -18,15 +18,7 @@ export class AjoutProduitComponent implements OnInit {
   
   message:string;
 
-  /*onAfficher(form:NgForm)
-  {
-  console.log("Façon 1: "+ this.chaine);
-  console.log("Façon 2: "+ form.value['ch']);
-  }
-  onSubmit(){
-    console.log("le libelle est : "+ this.lib);
-    console.log("le ide est : "+ this.Ide);
-  }*/
+ 
 
   onSubmit(f:NgForm){
     

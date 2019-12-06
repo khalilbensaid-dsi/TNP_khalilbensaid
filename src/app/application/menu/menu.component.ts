@@ -28,18 +28,6 @@ constructor(private produitsService:ProduitsService,private router:Router ) { }
 ngOnInit() {
 
 }
-onVerif(){
-  for (let i=0;i<this.lesProduits.length;i++){
-    //console.log("Façon 1: "+ this.lesProduits);
-  /*if(this.search=this.lesProduits[i]){
 
-    }*/
-}
-}
-//boutton search
-/*onContact()
-{ 
-  this.router.navigate(['/accueil']);
-  
-}*/
+
 }

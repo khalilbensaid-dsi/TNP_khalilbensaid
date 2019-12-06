@@ -29,7 +29,6 @@ export class ProduitComponent implements OnInit {
     let id= Number(this.activatedRoute.snapshot.params['id']);
     this.c= this.produitsService.getProduitById(id);
   }
-    //this.identifiant = this.activatedRoute.snapshot.params['id'];
-    //this.titre= this.activatedRoute.snapshot.params['title'];
+   
 
 }
