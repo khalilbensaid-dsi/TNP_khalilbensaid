@@ -1,10 +1,43 @@
-<br>
-<h2>Liste des produits</h2>
-<ul>
-<ng-container *ngFor="let p of lesProduits">
-   <li> Id: {{p.id}} Libellé:   {{p.libelle}}
-   <a [routerLink]="['/produits',p.id]"> Détail</a>  
-</li> 
-</ng-container>
-</ul>
+<app-menu></app-menu>
 
+
+<div class="active-pink-3 active-pink-4 mb-4">
+      <input class="form-control" type="text" placeholder="Recherche par titre" [(ngModel)]="lawej" aria-label="Search">
+   </div>
+
+<table><tr id="conteneur" >
+<td *ngFor="let p of lesProduits | searsh:lawej ">
+      
+         <div class="card shadow-lg p-3 mb-5 bg-white rounded" style="width: 16rem; margin-left: 20%;"  >
+                     
+               <img [src]='p.img' height='200px'width='200px'/>
+                     
+            <div class="card-body">
+               <h5 class="card-title">{{p.title}}</h5>
+               <p class="card-text">{{p.desc}}
+            </div>
+
+            <ul class="list-group list-group-flush">
+               <li class="list-group-item">Id : {{p.id}}</li>
+            
+               <li class="list-group-item">prix : {{p.prix}} TND</li>
+            </ul>
+            
+            <div class="card-body">
+                  <button type="button" [routerLink]="['/produits',p.id]"  class="card-link btn btn-dark float-right " >Détails</button>
+                  <button type="button" class=" card-link btn btn-warning float-right "(click)="delete(p.id)" >Supprimer</button>
+               
+                  
+            </div>
+         </div>
+              
+</td>
+</tr>
+</table> 
+
+
+
+
+
+
+    

@@ -1,13 +1,75 @@
-<h1>Menu</h1>
-<ul class="nav nav-tabs">
-    <li class="nav-item">
-        <a class="nav-link" routerLinkActive="active" [routerLink]="['/accueil']">Accueil</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" routerLinkActive="active" [routerLink]=" ['/produits']">Produits</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" routerLinkActive="active" [routerLink]="['/contact']">Contact</a>
-    </li>
-</ul>
+<!-- Image and text -->
+<nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+          <img src="../assets/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+          K.B.S WOOD
+        </a>
+      </nav>
+
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
+        <span class="navbar-brand mb-0 h1" >Admin
+        </span>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" routerLinkActive="active" [routerLink]="['/accueil']"> Accueil</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLinkActive="active" [routerLink]=" ['/produits']">Produits</a>
+            </li>
+            <li class="nav-item">
+                    <a class="nav-link" routerLinkActive="active" [routerLink]=" ['/AjoutProduit']">Ajout Produit</a>
+                </li>
+            <!--<li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>-->
+            <li class="nav-item">
+                    <a class="nav-link" routerLinkActive="active" [routerLink]="['/contact']">Contact</a>
+            </li>
+          </ul>
+          
+          <form class="form-inline my-2 my-lg-0" >
+            <button class="btn btn-outline-success my-2 my-sm-0" [routerLink]="['/Login']"type="submit">disconnect</button>
+          </form>
+        </div>
+      </nav>
+      
+<!--<ng-container *ngFor="let p of lesProduits">
+
+         <div class="card" style="width: 15rem; margin-left: 40%;"  >
+                     
+               <img [src]='p.img' height='200px'width='200px' />
+                     
+            <div class="card-body">
+               <h5 class="card-title">{{p.title}}</h5>
+               <p class="card-text">{{p.desc}}
+            </div>
+
+            <ul class="list-group list-group-flush">
+               <li class="list-group-item">Id : {{p.id}}</li>
+            
+               <li class="list-group-item">prix : {{p.prix}}</li>
+            </ul>
+            
+            <div class="card-body">
+               <a [routerLink]="['/produits',p.id]" class="card-link">Détail</a>
+               <a href="#" class="card-link"(click)="onSupp()">Supprimer</a>
+            </div>
+         </div>
+              
+</ng-container>-->
 

@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { Produit } from '../Produit';
+import { ProduitsService } from '../produits.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-menu',
@@ -6,10 +10,36 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent implements OnInit {
+  search:string;
+  verif:boolean;
 
-  constructor() { }
+  onAfficher(form:NgForm)
+{
+console.log("Façon 1: "+ this.search);
+for (let i=0;i<this.lesProduits.length;i++){
+  console.log("Façon 1: "+ this.lesProduits[i]);
+}
 
-  ngOnInit() {
-  }
+}
 
+lesProduits :Produit[];
+constructor(private produitsService:ProduitsService,private router:Router ) { }
+
+ngOnInit() {
+
+}
+onVerif(){
+  for (let i=0;i<this.lesProduits.length;i++){
+    //console.log("Façon 1: "+ this.lesProduits);
+  /*if(this.search=this.lesProduits[i]){
+
+    }*/
+}
+}
+//boutton search
+/*onContact()
+{ 
+  this.router.navigate(['/accueil']);
+  
+}*/
 }

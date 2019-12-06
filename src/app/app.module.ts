@@ -11,6 +11,15 @@ import { MenuComponent } from './application/menu/menu.component';
 import { ProduitComponent } from './application/produit/produit.component';
 import { ProduitsComponent } from './application/produits/produits.component';
 
+import { AjoutProduitComponent } from './application/ajout-produit/ajout-produit.component';
+import { LoginComponent } from './application/login/login.component';
+
+import { ModifComponent } from './application/modif/modif.component';
+import { SearshPipe } from './searsh.pipe';
+
+
+
+
 
 
 
@@ -22,7 +31,12 @@ import { ProduitsComponent } from './application/produits/produits.component';
     ErrorComponent,
     MenuComponent,
     ProduitComponent,
-    ProduitsComponent
+    ProduitsComponent,
+
+    AjoutProduitComponent,
+    LoginComponent,
+    ModifComponent,
+    SearshPipe
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,13 @@
+body{
+    padding: 2rem 0rem;
+  }
+  #conteneur
+{
+    display: flex;
+    flex-wrap: wrap;
+  
+}
+
+td{
+  margin: 3%;
+}

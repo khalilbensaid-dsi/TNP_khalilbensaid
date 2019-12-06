@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { ProduitsService } from '../produits.service';
+import { Produit } from '../Produit';
+
 
 @Component({
   selector: 'app-produit',
@@ -9,11 +12,24 @@ import { ActivatedRoute } from '@angular/router';
 export class ProduitComponent implements OnInit {
 
   identifiant:number;
-
-    constructor(private activatedRoute:ActivatedRoute) { }
+  titre:string;
+  c: Produit;
+  onModif()
+  { 
+    this.router.navigate(['/modif']); 
+      }
+      retourProduit(){
+        this.router.navigate(['/produits']); 
+      }  
+  
+  constructor(private activatedRoute:ActivatedRoute,private produitsService:ProduitsService, private router:Router) { }
 
   ngOnInit() {
-    this.identifiant = this.activatedRoute.snapshot.params['id'];
 
-}
+    let id= Number(this.activatedRoute.snapshot.params['id']);
+    this.c= this.produitsService.getProduitById(id);
+  }
+    //this.identifiant = this.activatedRoute.snapshot.params['id'];
+    //this.titre= this.activatedRoute.snapshot.params['title'];
+
 }

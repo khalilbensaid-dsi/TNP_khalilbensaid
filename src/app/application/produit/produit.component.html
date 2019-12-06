@@ -1,1 +1,27 @@
-L'identifiant récupéré est {{identifiant}}
+<app-menu></app-menu>
+
+
+<div class="card shadow-lg p-3 mb-5 bg-white rounded" style="width: 15rem; margin-left: 40%;margin-top: 4%;">
+         <img [src]='c.img' height='200px'width='200px' />
+      <div class="card-body">      
+            <h5>{{c.title}}</h5>
+            <p>{{c.desc}}</p>
+      </div>   
+      <ul class="list-group list-group-flush">
+         <li class="list-group-item">Id : {{c.id}}</li>
+         <li class="list-group-item">prix : {{c.prix}}</li>
+         <li class="list-group-item"><label>épuisé  {{c.ep}}</label><input type="checkbox" name="ep" value="c.ep"checked/>
+         </li>
+         <li class="list-group-item">ajouter le :  {{c.date|date:'dd/MM/yyyy'}}</li>
+      </ul>
+      
+      <div class="card-body">
+            
+         
+            <button type="button"[routerLink]="['/produits',c.id]" class="card-link btn btn-dark"(click)="onModif()"> Modifier</button>
+         <button type="button"  class="btn btn-warning " (click)="retourProduit()" >Arriére</button>
+      </div>
+</div>
+
+
+
